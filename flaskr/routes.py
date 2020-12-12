@@ -40,7 +40,7 @@ def nuevo():
 
 @app.route('/escolares')
 def call_pacientes():
-    connection = psycopg2.connect(user = "sa",password = "12345678",host = "localhost",port = "5432",database = "pacientes")
+    connection = psycopg2.connect("postgres://gcgzggrqwzmdtk:d7905b404e3103371b5973915b1cd74c81281c195c3a0330ad91a6d1c3cd07a3@ec2-54-225-254-115.compute-1.amazonaws.com:5432/d6i1rgvh54mffe")
     cursor = connection.cursor()
     cursor.execute("SELECT * from alumnos;")
     record = cursor.fetchall()
