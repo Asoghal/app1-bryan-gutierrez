@@ -1,0 +1,13 @@
+from flaskr import app
+
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
+@app.route('/second')
+def hola():
+    return 'Segunda ruta!'
+
+@app.errorhandler(404)
+def error(e):
+      return 'Página no encontrada'
