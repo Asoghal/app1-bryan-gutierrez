@@ -25,8 +25,8 @@ def index():
         alumno=Alumnos(nombre=c_nombre,apellido=c_apellido)
         db.session.add(alumno)
         db.session.commit()
-        
-        return render_template("nuevo.html",nombre=c_nombre)
+        alumnos=call_pacientes()
+        return render_template("nuevo.html",nombre=alumnos[0])
     lista=["Acerca","Contacto","Nosotros","FAQ"]
     return render_template("about.html",lista=lista)
 
