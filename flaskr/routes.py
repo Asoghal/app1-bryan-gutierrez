@@ -25,7 +25,7 @@ def index():
         alumno=Alumnos(nombre=c_nombre,apellido=c_apellido)
         db.session.add(alumno)
         db.session.commit()
-        mensaje="Alumno registrado"
+        
         return render_template("nuevo.html",nombre=c_nombre)
     lista=["Acerca","Contacto","Nosotros","FAQ"]
     return render_template("about.html",lista=lista)
@@ -44,7 +44,7 @@ def call_pacientes():
     cursor = connection.cursor()
     cursor.execute("SELECT * from alumnos;")
     record = cursor.fetchall()
-    return str(record)
+    return record
 
 
 @app.errorhandler(404)
