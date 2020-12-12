@@ -14,7 +14,7 @@
     </div>
 
     <div>
-        
+
         <table>
             
             <tr>
@@ -22,16 +22,14 @@
                 <th>Apellido</th>
             </tr>
            
+            {% for alumno in l_alumnos %}
             <tr>
-                {% for alumno in l_alumnos %}
-                <td>
-                    {{alumno[1]}}
-                </td>
-                <td>
-                    {{alumno[2]}}
-                </td>
-                {% endfor %}
+                <td>{{alumno[1]}}</td>
             </tr>
+            <tr>
+                <td>{{alumno[2]}}</td>
+            </tr>
+            {% endfor %}
         </table>
     </div>
 
