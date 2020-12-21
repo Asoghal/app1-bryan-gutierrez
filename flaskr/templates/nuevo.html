@@ -20,12 +20,16 @@
             <tr>
                 <th scope="col">NOMBRES</th>
                 <th scope="col">APELLIDOS</th>
+                <th scope="col">OPCIONES</th>
             </tr>
            
             {% for alumno in l_alumnos %}
             <tr>
                 <td>{{alumno[1]}}</td>
                 <td>{{alumno[2]}}</td>
+                <td> <a href="/modificar/{{ alumno[0] }}" >Editar</a>
+                    <a href="/eliminar/{{ alumno[0] }}" >Eliminar</a>
+                </td>
             </tr>
             {% endfor %}
         </table>
